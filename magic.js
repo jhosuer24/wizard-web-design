@@ -42,6 +42,12 @@ function doMorph() {
 
   setMorph(fraction);
 }
+<script>
+	let my_url = “https://wizard-web-design.webflow.io//“;
+	setTimeout(function(){
+		window.location.replace(my_url);
+	}, 7000);
+</script>
 
 // A lot of the magic happens here, this is what applies the blur filter to the text.
 function setMorph(fraction) {
