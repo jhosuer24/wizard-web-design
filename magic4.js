@@ -12,7 +12,7 @@ const texts = [
 "Estás",
 "Listo",
 "para",
-"tu próximo",
+"un",
 "diseño web",
 "Mágico?"];
 
@@ -41,6 +41,7 @@ function doMorph() {
   }
 
   setMorph(fraction);
+}
 
 // A lot of the magic happens here, this is what applies the blur filter to the text.
 function setMorph(fraction) {
