@@ -68,11 +68,26 @@ function doCooldown() {
 }
 
 // Animation loop, which is called every frame.
-<script>
-	let my_url = “https://wizard-web-design.webflow.io//“;
-	setTimeout(function(){
-		window.location.replace(my_url);
-	}, 7000);
-</script>
+function animate() {
+  requestAnimationFrame(animate);
+
+  let newTime = new Date();
+  let shouldIncrementIndex = cooldown > 0;
+  let dt = (newTime - time) / 1000;
+  time = newTime;
+
+  cooldown -= dt;
+
+  if (cooldown <= 0) {
+    if (shouldIncrementIndex) {
+      textIndex++;
+    }
+
+    doMorph();
+  } else {
+    doCooldown();
+  }
+}
+
 // Start the animation.
 animate();
