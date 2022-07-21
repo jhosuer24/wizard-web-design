@@ -41,13 +41,6 @@ function doMorph() {
   }
 
   setMorph(fraction);
-}
-<script>
-	let my_url = “https://wizard-web-design.webflow.io//“;
-	setTimeout(function(){
-		window.location.replace(my_url);
-	}, 7000);
-</script>
 
 // A lot of the magic happens here, this is what applies the blur filter to the text.
 function setMorph(fraction) {
@@ -75,26 +68,11 @@ function doCooldown() {
 }
 
 // Animation loop, which is called every frame.
-function animate() {
-  requestAnimationFrame(animate);
-
-  let newTime = new Date();
-  let shouldIncrementIndex = cooldown > 0;
-  let dt = (newTime - time) / 1000;
-  time = newTime;
-
-  cooldown -= dt;
-
-  if (cooldown <= 0) {
-    if (shouldIncrementIndex) {
-      textIndex++;
-    }
-
-    doMorph();
-  } else {
-    doCooldown();
-  }
-}
-
+<script>
+	let my_url = “https://wizard-web-design.webflow.io//“;
+	setTimeout(function(){
+		window.location.replace(my_url);
+	}, 7000);
+</script>
 // Start the animation.
 animate();
